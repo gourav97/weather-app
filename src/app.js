@@ -11,6 +11,7 @@ console.log(__dirname)
 console.log(path.join(__dirname,"../public/help.htmml"))
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define path for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -107,6 +108,6 @@ app.get('*',(req, res)=> {
 })
 
 
-app.listen(3000, ()=> {
-    console.log("Listening on port 3000")
+app.listen(port, ()=> {
+    console.log("Listening on port "+ port)
 })

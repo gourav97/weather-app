@@ -21,7 +21,7 @@ const messageBox2 = document.querySelector('#message-2')
         messageBox.textContent = "Please provide a value"
     }
     else {
-        fetch(`http://localhost:3000/weather?address=${location}`).then(
+        fetch(`/weather?address=${location}`).then(
             res => res.json()).then(data =>{
                 if(data.error){
                     messageBox.textContent = data.error
